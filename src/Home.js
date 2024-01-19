@@ -5,21 +5,12 @@ function Home() {
     const [data , setData] = useState([])
     const navigate = useNavigate()
   useEffect(() =>{
-    axios.get('http://localhost:3000/users')
+    axios.get('http://localhost:5001/users')
     .then(res => setData(res.data))
     .catch(err => console.log(err))
   },[])
 
-  // const handleDelete = (id) =>{
-  //    //const confirm = window.confirm("would you like to delete?");
-    
-  //     axios.delete(`http://localhost:3000/users/${id}` )
-  //     .then(res => {
-  //       navigate("/");
-  //     }).catch(err => console.log(err))
-      
-     
-  // }
+
 
   const handleDelete = (id) =>{
     const confirm = window.confirm("would you like to delete?");
@@ -27,9 +18,8 @@ function Home() {
     axios.delete(`http://localhost:5001/users/${id}`)
     .then(res => {
       console.log("User deleted successfully:", res.data);
-      // After deletion, update the data in the state
       setData(data.filter(user => user.id !== id));
-      
+      window.location.reload()
     })
     .catch(err => console.log(err));
     }

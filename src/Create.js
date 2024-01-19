@@ -34,7 +34,7 @@ function Create() {
 
             <div className='mb-2'>
                 <label htmlFor='email'>Email:</label>
-                 <input type='email' name='email' className='form-control' placeholder='Enter Name' value={values.email}
+                 <input type='email' name='email' className='form-control' placeholder='Enter Email' value={values.email}
                   onChange={e => setValues({...values , email: e.target.value})}
                  />
             </div>
