@@ -1,34 +1,19 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "rohit",
-      "email": "abc@gmail.com"
+      "id": "2ba3",
+      "name": "SUPRITAM ",
+      "email": "supritampal8@gmail.com"
     },
     {
-      "id": 2,
-      "name": "suman",
-      "email": "suman9@gmail.com"
-    },
-    {
-      "id": "1fe6",
+      "id": "80f2",
       "name": "Nllu",
-      "email": "nilu2gmail.com"
+      "email": "nilu2@gmail.com"
     },
     {
-      "id": "3348",
-      "name": "suvo",
-      "email": "suvo@gamil.com"
-    },
-    {
-      "id": "feb4",
-      "name": "hgvh",
-      "email": "nilu2gmail.com"
-    },
-    {
-      "id": "4c6d",
-      "name": "hi",
-      "email": "hi8@gmail.com"
+      "id": "5185",
+      "name": "Rohit Kumar",
+      "email": "rohit@gmail.com"
     }
   ]
 }

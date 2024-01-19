@@ -1,3 +1,9 @@
+
+
+I build a CRUD application using Reactjs , React-Hooks , react-router-dom , axios and designed it by bootstrap  
+Here user can create their name and email , also see them and also update and then delete by click the respective button
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

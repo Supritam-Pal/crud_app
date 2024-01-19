@@ -1,14 +1,40 @@
 import React , {useState , useEffect} from 'react'
 import axios from 'axios'
-import {Link} from "react-router-dom"
+import {Link , useNavigate} from "react-router-dom"
 function Home() {
     const [data , setData] = useState([])
-    
+    const navigate = useNavigate()
   useEffect(() =>{
     axios.get('http://localhost:3000/users')
     .then(res => setData(res.data))
     .catch(err => console.log(err))
   },[])
+
+  // const handleDelete = (id) =>{
+  //    //const confirm = window.confirm("would you like to delete?");
+    
+  //     axios.delete(`http://localhost:3000/users/${id}` )
+  //     .then(res => {
+  //       navigate("/");
+  //     }).catch(err => console.log(err))
+      
+     
+  // }
+
+  const handleDelete = (id) =>{
+    const confirm = window.confirm("would you like to delete?");
+    if(confirm){
+    axios.delete(`http://localhost:5001/users/${id}`)
+    .then(res => {
+      console.log("User deleted successfully:", res.data);
+      // After deletion, update the data in the state
+      setData(data.filter(user => user.id !== id));
+      
+    })
+    .catch(err => console.log(err));
+    }
+   }
+
 
   return (
     <div className='d-flex flex-column justify-content-center align-items-center bg-light vh-100'>
@@ -37,8 +63,9 @@ function Home() {
                          <td>{d.email}</td>
                          <td>
                          <Link to={`/read/${d.id}`} className='btn btn-sm btn-info me-2'>Read</Link>
-                         <button className='btn btn-sm btn-primary me-2'>Edit</button>
-                         <button className='btn btn-sm btn-danger '>Delete</button>
+                         <Link to={`/update/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
+                         {/* <button className='btn btn-sm btn-danger '>Delete</button> */}
+                         <button onClick={() => handleDelete(d.id)} className='btn btn-sm btn-danger '>Delete</button>
                          </td>
                         </tr>
                     ))
