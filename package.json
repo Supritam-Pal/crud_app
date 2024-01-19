@@ -21,9 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "json-server": "json-server --watch db.json --port 5001",
-    "dev": "concurrently \"npm start\" \"npm run json-server\""
+    "eject": "react-scripts eject"
+
   },
   "eslintConfig": {
     "extends": [
@@ -47,3 +46,5 @@
     "gh-pages": "^6.1.1"
   }
 }
+
+
