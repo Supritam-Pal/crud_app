@@ -1,9 +1,10 @@
 import React , {useState , useEffect} from 'react'
 import axios from 'axios'
-import {Link , useNavigate} from "react-router-dom"
+import {Link} from "react-router-dom"
 function Home() {
     const [data , setData] = useState([])
-    const navigate = useNavigate()
+
+
   useEffect(() =>{
     axios.get('http://localhost:5001/users')
     .then(res => setData(res.data))

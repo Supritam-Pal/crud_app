@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "2ba3",
-      "name": "SUPRITAM ",
+      "name": "Supritam Pal",
       "email": "supritampal8@gmail.com"
     },
     {
@@ -12,8 +12,18 @@
     },
     {
       "id": "8371",
-      "name": "Debasis Ghosh",
+      "name": "Debasis Biswas",
       "email": "debu3@gmail.com"
+    },
+    {
+      "id": "595c",
+      "name": "Subrata Sharma",
+      "email": "suvo@gamil.com"
+    },
+    {
+      "id": "db0a",
+      "name": "Aritra Roy",
+      "email": "avi8@gmail.com"
     }
   ]
 }
